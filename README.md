@@ -60,4 +60,5 @@ Clicking the "Process" button starts the processing. The images are uploaded to 
 Download Results:
 The processed images are downloaded from the S3 bucket and saved locally to ./output directory.
 
-
+## Video
+https://drive.google.com/file/d/1NPFmrbc68BoYg7NfZ9v5UluU9FVYnYoS/view?usp=sharing
