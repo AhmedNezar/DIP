@@ -7,26 +7,26 @@ import threading
 
 s3 = boto3.resource(
     's3',
-    aws_access_key_id="AKIAVRUVR5RVOEOGVI6Y",
-    aws_secret_access_key="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",
-    region_name="us-east-1"
+    aws_access_key_id="......",
+    aws_secret_access_key="......",
+    region_name="......"
 )
 bucket = s3.Bucket('dipimagesbucket')
 
 sqs = boto3.resource(
     'sqs',
-    aws_access_key_id="AKIAVRUVR5RVOEOGVI6Y",
-    aws_secret_access_key="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",
-    region_name="us-east-1"
+    aws_access_key_id="......",
+    aws_secret_access_key="......",
+    region_name="......"
 )
-q = sqs.get_queue_by_name(QueueName='dip.fifo')
+q = sqs.get_queue_by_name(QueueName='......')
 
 ssh = paramiko.SSHClient()
-k = paramiko.RSAKey.from_private_key_file("../dip.pem")
+k = paramiko.RSAKey.from_private_key_file("......")
 
 
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-ssh.connect(hostname="ec2-3-94-182-207.compute-1.amazonaws.com", username="ec2-user", pkey=k)
+ssh.connect(hostname="......", username="ec2-user", pkey=k)
 
 
 def receive_messages(images, operation):
